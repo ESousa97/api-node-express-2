@@ -715,12 +715,12 @@ Este projeto está licenciado sob a **Licença ISC** - uma licença permissiva q
 
 <div align="center">
 
-### 🏆 **Desenvolvedor & Arquiteto**
+### 🏆 **Desenvolvedor**
 
 <img src="https://github.com/ESousa97.png" width="120" height="120" style="border-radius: 50%; border: 3px solid #4CAF50;">
 
 **José Enoque Sousa**  
-*Full Stack Developer & API Architect*
+*Full Stack Developer*
 
 [![GitHub](https://img.shields.io/badge/GitHub-ESousa97-181717?style=flat-square&logo=github)](https://github.com/ESousa97)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Enoque%20Sousa-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/enoque-sousa-bb89aa168/)
