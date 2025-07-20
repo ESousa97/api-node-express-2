@@ -46,7 +46,6 @@
 - [📖 API Reference](#-api-reference)
 - [🧪 Testes e Qualidade](#-testes-e-qualidade-de-código)
 - [🌐 Deploy e Escalabilidade](#-deployment-e-escalabilidade)
-- [🤝 Contribuição](#-contribuição)
 - [👥 Equipe](#-equipe-principal)
 - [❓ FAQ](#-faq)
 - [📞 Suporte](#-contato-e-suporte)
@@ -638,55 +637,6 @@ heroku logs --tail
 
 ---
 
-## 🤝 **Contribuição**
-
-Contribuições são **muito bem-vindas**! Este projeto segue práticas de código aberto e valorizamos cada contribuição.
-
-### 📋 **Como Contribuir**
-
-```bash
-# 1️⃣ Fork o projeto no GitHub
-# 2️⃣ Clone seu fork
-git clone https://github.com/SEU-USUARIO/api-node-express-2.git
-
-# 3️⃣ Crie uma branch para sua feature
-git checkout -b feature/nova-funcionalidade
-
-# 4️⃣ Implemente suas mudanças
-# Siga os padrões de código existentes
-
-# 5️⃣ Execute os testes
-npm test
-npm run lint
-
-# 6️⃣ Commit suas mudanças
-git commit -m "✨ Adiciona nova funcionalidade X"
-
-# 7️⃣ Push para sua branch
-git push origin feature/nova-funcionalidade
-
-# 8️⃣ Abra um Pull Request
-```
-
-### 📝 **Diretrizes de Contribuição**
-
-- ✅ **Código:** Siga o padrão ESLint configurado
-- 🧪 **Testes:** Adicione testes para novas funcionalidades
-- 📖 **Documentação:** Atualize README se necessário
-- 🔀 **Commits:** Use mensagens descritivas com emojis
-- 🐛 **Bugs:** Reporte via [Issues](https://github.com/ESousa97/api-node-express-2/issues)
-
-### 🏆 **Tipos de Contribuição Valorizadas**
-
-- 🚀 **Novas funcionalidades** - Endpoints, middlewares, validações
-- 🐛 **Correção de bugs** - Melhorias na estabilidade
-- 📚 **Documentação** - Exemplos, tutoriais, comentários
-- 🧪 **Testes** - Cobertura, casos edge, integração
-- ⚡ **Performance** - Otimizações, caching, queries
-- 🛡️ **Segurança** - Validações, sanitização, autenticação
-
----
-
 ## 👥 **Equipe Principal**
 
 <div align="center">
@@ -884,33 +834,6 @@ app.use((req, res, next) => {
 | 🚀 **Colaboração** | [Email](mailto:enoque.sousa@example.com) | 24h |
 
 
-
-</div>
-
----
-
-## 🎉 **Agradecimentos**
-
-<div align="center">
-
-Agradecemos a todos que contribuíram para tornar este projeto uma referência em APIs Node.js:
-
-### 🌟 **Tecnologias que Inspiraram**
- 💚 **Node.js Community** - Por criar um ecossistema incrível
-
- ⚡ **Express.js Team** - Pela simplicidade e flexibilidade
-
- 🍃 **MongoDB** - Por revolucionar bancos NoSQL
-
- 🔧 **Mongoose** - Por facilitar a modelagem de dados
-
-### 📚 **Recursos Educacionais**
-
- 🎓 Cursos e tutoriais da comunidade
-
- 📖 Documentação oficial das tecnologias
-
- 🤝 Stack Overflow e fóruns de desenvolvimento
 
 </div>
 
