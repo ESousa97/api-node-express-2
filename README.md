@@ -47,7 +47,6 @@
 - [🧪 Testes e Qualidade](#-testes-e-qualidade-de-código)
 - [🌐 Deploy e Escalabilidade](#-deployment-e-escalabilidade)
 - [🤝 Contribuição](#-contribuição)
-- [📄 Licença](#-licença)
 - [👥 Equipe](#-equipe-principal)
 - [❓ FAQ](#-faq)
 - [📞 Suporte](#-contato-e-suporte)
@@ -685,29 +684,6 @@ git push origin feature/nova-funcionalidade
 - 🧪 **Testes** - Cobertura, casos edge, integração
 - ⚡ **Performance** - Otimizações, caching, queries
 - 🛡️ **Segurança** - Validações, sanitização, autenticação
-
----
-
-## 📄 **Licença**
-
-<div align="center">
-
-![Licença ISC](https://img.shields.io/badge/Licença-ISC-blue?style=for-the-badge)
-
-Este projeto está licenciado sob a **Licença ISC** - uma licença permissiva que permite uso comercial e modificação.
-
-[📋 Ver arquivo LICENSE completo](LICENSE)
-
-</div>
-
-### 📋 **Resumo da Licença**
-
-- ✅ **Uso comercial** permitido
-- ✅ **Modificação** permitida  
-- ✅ **Distribuição** permitida
-- ✅ **Uso privado** permitido
-- ❌ **Responsabilidade** não incluída
-- ❌ **Garantia** não incluída
 
 ---
 
