@@ -41,8 +41,18 @@ class AutorController {
   static atualizarAutor = async (req, res, next) => {
     try {
       const id = req.params.id;
+      
+      // Validar campos permitidos para atualização
+      const camposPermitidos = ["nome", "nacionalidade"];
+      const dadosAtualizacao = {};
+      
+      for (const campo of camposPermitidos) {
+        if (req.body[campo] !== undefined) {
+          dadosAtualizacao[campo] = req.body[campo];
+        }
+      }
 
-      const autorResultado = await autores.findByIdAndUpdate(id, {$set: req.body});
+      const autorResultado = await autores.findByIdAndUpdate(id, {$set: dadosAtualizacao});
 
       if (autorResultado !== null) {
         res.status(200).send({message: "Autor atualizado com sucesso"});

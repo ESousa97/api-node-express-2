@@ -1,14 +1,15 @@
 import express from "express";
 import AutorController from "../controllers/autoresController.js";
 import paginar from "../middlewares/paginar.js";
+import { rateLimiterLeitura, rateLimiterEscrita } from "../middlewares/rateLimiter.js";
 
 const router = express.Router();
 
 router
-  .get("/autores", AutorController.listarAutores, paginar)
-  .get("/autores/:id", AutorController.listarAutorPorId)
-  .post("/autores", AutorController.cadastrarAutor)
-  .put("/autores/:id", AutorController.atualizarAutor)
-  .delete("/autores/:id", AutorController.excluirAutor);
+  .get("/autores", rateLimiterLeitura, AutorController.listarAutores, paginar)
+  .get("/autores/:id", rateLimiterLeitura, AutorController.listarAutorPorId)
+  .post("/autores", rateLimiterEscrita, AutorController.cadastrarAutor)
+  .put("/autores/:id", rateLimiterEscrita, AutorController.atualizarAutor)
+  .delete("/autores/:id", rateLimiterEscrita, AutorController.excluirAutor);
 
 export default router;   
