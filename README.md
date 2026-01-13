@@ -4,6 +4,10 @@
   
   **Uma arquitetura robusta para gerenciamento de dados, focada em escalabilidade, manutenibilidade e tratamento de erros avançado**
   
+  [![CI](https://github.com/ESousa97/api-node-express-2/actions/workflows/ci.yml/badge.svg)](https://github.com/ESousa97/api-node-express-2/actions/workflows/ci.yml)
+  [![CodeQL](https://github.com/ESousa97/api-node-express-2/actions/workflows/codeql.yml/badge.svg)](https://github.com/ESousa97/api-node-express-2/security/code-scanning)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  
   [![Linguagem Principal](https://img.shields.io/github/languages/top/ESousa97/api-node-express-2?style=for-the-badge&color=blue)](https://github.com/ESousa97/api-node-express-2)
   [![Tamanho do Repositório](https://img.shields.io/github/repo-size/ESousa97/api-node-express-2?style=for-the-badge&color=green)](https://github.com/ESousa97/api-node-express-2)
   [![Último Commit](https://img.shields.io/github/last-commit/ESousa97/api-node-express-2?style=for-the-badge&color=yellow)](https://github.com/ESousa97/api-node-express-2)

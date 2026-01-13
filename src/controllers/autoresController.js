@@ -10,7 +10,7 @@ class AutorController {
 
       next();
     } catch (erro) {
-      res.status(500).json({ message: "Erro interno no servidor" });
+      next(erro);
     }
   };
 
