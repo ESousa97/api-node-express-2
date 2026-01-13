@@ -670,8 +670,8 @@ heroku logs --tail
    # Local
    STRING_CONEXAO_DB=mongodb://localhost:27017/livraria
    
-   # MongoDB Atlas
-   STRING_CONEXAO_DB=mongodb+srv://user:pass@cluster.mongodb.net/livraria
+   # MongoDB Atlas (substitua <USER>, <PASSWORD> e <CLUSTER>)
+   STRING_CONEXAO_DB=mongodb+srv://<USER>:<PASSWORD>@<CLUSTER>.mongodb.net/livraria
    ```
 3. Certifique-se de que o MongoDB está rodando (local) ou configurado (Atlas)
 
