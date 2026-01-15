@@ -6,6 +6,7 @@
   
   [![CI](https://github.com/ESousa97/api-node-express-2/actions/workflows/ci.yml/badge.svg)](https://github.com/ESousa97/api-node-express-2/actions/workflows/ci.yml)
   [![CodeQL](https://github.com/ESousa97/api-node-express-2/actions/workflows/codeql.yml/badge.svg)](https://github.com/ESousa97/api-node-express-2/security/code-scanning)
+  [![Code Quality](https://www.codefactor.io/repository/github/ESousa97/api-node-express-2/badge)](https://www.codefactor.io/repository/github/ESousa97/api-node-express-2)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   [![Linguagem Principal](https://img.shields.io/github/languages/top/ESousa97/api-node-express-2?style=for-the-badge&color=blue)](https://github.com/ESousa97/api-node-express-2)
@@ -80,24 +81,24 @@ graph TD
     subgraph "🌐 Camada de Apresentação"
         A[📱 Cliente HTTP] --> B[🛣️ Routes]
     end
-    
+
     subgraph "🎮 Camada de Controle"
         B --> C[🎯 Controller]
         C --> D[📊 Middleware Paginação]
     end
-    
+
     subgraph "📦 Camada de Dados"
         D --> E[🏪 Model]
         E --> F[(🗄️ MongoDB)]
     end
-    
+
     subgraph "🛡️ Camada de Erros"
         B -->|❌ Erro| G[🚨 Middleware de Erros]
         C -->|❌ Erro| G
         D -->|❌ Erro| G
         E -->|❌ Erro| G
     end
-    
+
     F --> E
     E --> D
     D --> C
@@ -117,13 +118,13 @@ graph TD
 
 ### 🔄 **Fluxo de Processamento**
 
-| Etapa | Componente | Responsabilidade |
-|-------|------------|------------------|
-| 1️⃣ | **Routes** | Definem endpoints e delegam requisições |
-| 2️⃣ | **Controllers** | Centralizam lógica de negócio e orquestração |
-| 3️⃣ | **Middlewares** | Processam paginação, ordenação e validação |
-| 4️⃣ | **Models** | Interagem com MongoDB via Mongoose |
-| 5️⃣ | **Error Handler** | Tratamento centralizado e padronizado |
+| Etapa | Componente        | Responsabilidade                             |
+| ----- | ----------------- | -------------------------------------------- |
+| 1️⃣    | **Routes**        | Definem endpoints e delegam requisições      |
+| 2️⃣    | **Controllers**   | Centralizam lógica de negócio e orquestração |
+| 3️⃣    | **Middlewares**   | Processam paginação, ordenação e validação   |
+| 4️⃣    | **Models**        | Interagem com MongoDB via Mongoose           |
+| 5️⃣    | **Error Handler** | Tratamento centralizado e padronizado        |
 
 ---
 
@@ -131,13 +132,13 @@ graph TD
 
 <div align="center">
 
-| 🎯 Decisão | 💡 Motivação | 🚀 Benefício |
-|------------|--------------|--------------|
-| **ES Modules** | Sintaxe moderna import/export | Melhor tree-shaking e performance |
-| **Express.js** | Framework minimalista | Flexibilidade e extensibilidade |
-| **Mongoose** | ODM robusto para MongoDB | Validação e relacionamentos avançados |
-| **Herança de Erros** | Sistema customizado hierárquico | Tratamento granular e consistente |
-| **Middlewares Reutilizáveis** | Separação de responsabilidades | Código modular e testável |
+| 🎯 Decisão                    | 💡 Motivação                    | 🚀 Benefício                          |
+| ----------------------------- | ------------------------------- | ------------------------------------- |
+| **ES Modules**                | Sintaxe moderna import/export   | Melhor tree-shaking e performance     |
+| **Express.js**                | Framework minimalista           | Flexibilidade e extensibilidade       |
+| **Mongoose**                  | ODM robusto para MongoDB        | Validação e relacionamentos avançados |
+| **Herança de Erros**          | Sistema customizado hierárquico | Tratamento granular e consistente     |
+| **Middlewares Reutilizáveis** | Separação de responsabilidades  | Código modular e testável             |
 
 </div>
 
@@ -158,13 +159,13 @@ ErroBase
 
 <div align="center">
 
-| 🔧 Funcionalidade | 📋 Descrição | ✨ Recursos |
-|-------------------|--------------|-------------|
-| **CRUD Autores** | Operações completas | Validação rigorosa |
-| **CRUD Livros** | Gestão com relacionamentos | População automática |
-| **Busca Avançada** | Filtros parametrizados | Múltiplos critérios |
-| **Paginação** | Performance otimizada | Ordenação flexível |
-| **Validação** | Schemas customizados | Mensagens descritivas |
+| 🔧 Funcionalidade  | 📋 Descrição               | ✨ Recursos           |
+| ------------------ | -------------------------- | --------------------- |
+| **CRUD Autores**   | Operações completas        | Validação rigorosa    |
+| **CRUD Livros**    | Gestão com relacionamentos | População automática  |
+| **Busca Avançada** | Filtros parametrizados     | Múltiplos critérios   |
+| **Paginação**      | Performance otimizada      | Ordenação flexível    |
+| **Validação**      | Schemas customizados       | Mensagens descritivas |
 
 </div>
 
@@ -199,20 +200,22 @@ ErroBase
 
 ### 🏗️ **Arquitetura Principal**
 
-| Categoria | Tecnologia | Versão | Propósito |
-|-----------|------------|--------|-----------|
-| **Runtime** | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white) | 16+ | Execução JavaScript backend |
-| **Framework** | ![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white) | 4.x | Rotas e middlewares HTTP |
-| **Database** | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white) | 5.x | Banco NoSQL |
-| **ODM** | ![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat&logoColor=white) | 7.x | Modelagem e validação |
+| Categoria     | Tecnologia                                                                                      | Versão | Propósito                   |
+| ------------- | ----------------------------------------------------------------------------------------------- | ------ | --------------------------- |
+| **Runtime**   | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white) | 18+    | Execução JavaScript backend |
+| **Framework** | ![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white) | 4.18+  | Rotas e middlewares HTTP    |
+| **Database**  | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white) | 6+     | Banco NoSQL                 |
+| **ODM**       | ![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat&logoColor=white)            | 8.x    | Modelagem e validação       |
 
 ### 🛠️ **Ferramentas de Desenvolvimento**
 
-| Ferramenta | Função | Status |
-|------------|--------|--------|
-| ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=flat&logo=eslint&logoColor=white) | Padronização de código | ✅ |
-| ![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=flat&logo=nodemon&logoColor=white) | Hot reload | ✅ |
-| ![Dotenv](https://img.shields.io/badge/Dotenv-ECD53F?style=flat&logoColor=black) | Variáveis de ambiente | ✅ |
+| Ferramenta                                                                                         | Função                 | Status |
+| -------------------------------------------------------------------------------------------------- | ---------------------- | ------ |
+| ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=flat&logo=eslint&logoColor=white)       | Padronização de código | ✅     |
+| ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=flat&logo=prettier&logoColor=black) | Formatação consistente | ✅     |
+| ![Jest](https://img.shields.io/badge/Jest-C21325?style=flat&logo=jest&logoColor=white)             | Testes automatizados   | ✅     |
+| ![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=flat&logo=nodemon&logoColor=white)    | Hot reload             | ✅     |
+| ![Dotenv](https://img.shields.io/badge/Dotenv-ECD53F?style=flat&logoColor=black)                   | Variáveis de ambiente  | ✅     |
 
 </div>
 
@@ -222,12 +225,14 @@ ErroBase
 
 ```
 🏗️ api-node-express-2/
-├── 📄 .env                          # Configurações de ambiente
-├── ⚙️ .eslintrc.json               # Regras do ESLint
+├── 📄 .env.example                 # Exemplo de variáveis de ambiente
+├── ⚙️ eslint.config.js             # Regras do ESLint
+├── 🎨 .prettierrc.json             # Regras do Prettier
 ├── 🚫 .gitignore                   # Arquivos ignorados pelo Git
 ├── 📦 package.json                 # Dependências e scripts
 ├── 🚀 server.js                    # Ponto de entrada da aplicação
-└── 📁 src/
+├── 📁 docs/                        # Documentação adicional
+├── 📁 src/
     ├── 🎯 app.js                   # Configuração principal do Express
     ├── ⚙️ config/
     │   └── 🔌 dbConnect.js         # Conexão com MongoDB
@@ -240,9 +245,11 @@ ErroBase
     │   ├── 🔍 NaoEncontrado.js     # Erro 404
     │   └── ❌ RequisicaoIncorreta.js # Erro 400
     ├── 🔧 middlewares/
-    │   ├── 🔍 manipulador404.js    # Tratamento de rotas não encontradas
+    │   ├── ⏱️ rateLimiter.js        # Rate limiting
+    │   ├── 🧼 sanitizador.js        # Sanitização de inputs
+    │   ├── 🔍 manipulador404.js     # Tratamento de rotas não encontradas
     │   ├── 🚨 manipuladorDeErros.js # Middleware central de erros
-    │   └── 📊 paginar.js           # Middleware de paginação
+    │   └── 📊 paginar.js            # Middleware de paginação
     ├── 📦 models/
     │   ├── 👤 Autor.js             # Schema do Autor
     │   ├── 📖 Livro.js             # Schema do Livro
@@ -252,6 +259,7 @@ ErroBase
         ├── 👥 autoresRoutes.js     # Rotas dos autores
         ├── 🏠 index.js             # Agregador de rotas
         └── 📚 livrosRoutes.js      # Rotas dos livros
+  └── 🧪 tests/                        # Testes automatizados
 ```
 
 ---
@@ -260,11 +268,11 @@ ErroBase
 
 <div align="center">
 
-| Requisito | Versão Mínima | Status | Descrição |
-|-----------|---------------|--------|-----------|
-| ![Node.js](https://img.shields.io/badge/Node.js-v16+-339933?style=flat&logo=node.js&logoColor=white) | 16.x | ✅ | Runtime JavaScript |
-| ![npm](https://img.shields.io/badge/npm-v7+-CB3837?style=flat&logo=npm&logoColor=white) | 7.x | ✅ | Gerenciador de pacotes |
-| ![MongoDB](https://img.shields.io/badge/MongoDB-v5+-47A248?style=flat&logo=mongodb&logoColor=white) | 5.x | ✅ | Banco de dados |
+| Requisito                                                                                            | Versão Mínima | Status | Descrição              |
+| ---------------------------------------------------------------------------------------------------- | ------------- | ------ | ---------------------- |
+| ![Node.js](https://img.shields.io/badge/Node.js-v18+-339933?style=flat&logo=node.js&logoColor=white) | 18.x          | ✅     | Runtime JavaScript     |
+| ![npm](https://img.shields.io/badge/npm-v9+-CB3837?style=flat&logo=npm&logoColor=white)              | 9.x           | ✅     | Gerenciador de pacotes |
+| ![MongoDB](https://img.shields.io/badge/MongoDB-v6+-47A248?style=flat&logo=mongodb&logoColor=white)  | 6.x           | ✅     | Banco de dados         |
 
 </div>
 
@@ -272,9 +280,9 @@ ErroBase
 
 ```bash
 # Verificar versões instaladas
-node --version    # Deve ser >= 16.x
-npm --version     # Deve ser >= 7.x
-mongod --version  # Deve ser >= 5.x
+node --version    # Deve ser >= 18.x
+npm --version     # Deve ser >= 9.x
+mongod --version  # Deve ser >= 6.x
 ```
 
 ---
@@ -410,15 +418,16 @@ curl -X POST "http://localhost:3000/livros" \
 <details>
 <summary><strong>📋 Ver todos os endpoints de autores</strong></summary>
 
-| Método | Endpoint | Descrição | Parâmetros | Status |
-|--------|----------|-----------|------------|--------|
-| `GET` | `/autores` | 📋 Lista autores com paginação | `pagina`, `limite`, `ordenacao` | ✅ |
-| `GET` | `/autores/:id` | 🔍 Busca autor específico | `id` (ObjectId) | ✅ |
-| `POST` | `/autores` | ➕ Cria novo autor | Body: `nome`, `nacionalidade` | ✅ |
-| `PUT` | `/autores/:id` | ✏️ Atualiza autor | `id` + campos a atualizar | ✅ |
-| `DELETE` | `/autores/:id` | 🗑️ Remove autor | `id` (ObjectId) | ✅ |
+| Método   | Endpoint       | Descrição                      | Parâmetros                      | Status |
+| -------- | -------------- | ------------------------------ | ------------------------------- | ------ |
+| `GET`    | `/autores`     | 📋 Lista autores com paginação | `pagina`, `limite`, `ordenacao` | ✅     |
+| `GET`    | `/autores/:id` | 🔍 Busca autor específico      | `id` (ObjectId)                 | ✅     |
+| `POST`   | `/autores`     | ➕ Cria novo autor             | Body: `nome`, `nacionalidade`   | ✅     |
+| `PUT`    | `/autores/:id` | ✏️ Atualiza autor              | `id` + campos a atualizar       | ✅     |
+| `DELETE` | `/autores/:id` | 🗑️ Remove autor                | `id` (ObjectId)                 | ✅     |
 
 **Exemplo de Resposta GET /autores:**
+
 ```json
 {
   "resultado": [
@@ -443,24 +452,24 @@ curl -X POST "http://localhost:3000/livros" \
 <details>
 <summary><strong>📖 Ver todos os endpoints de livros</strong></summary>
 
-| Método | Endpoint | Descrição | Parâmetros | Status |
-|--------|----------|-----------|------------|--------|
-| `GET` | `/livros` | 📋 Lista livros com paginação | `pagina`, `limite`, `ordenacao` | ✅ |
-| `GET` | `/livros/busca` | 🔍 Busca avançada | Ver tabela abaixo | ✅ |
-| `GET` | `/livros/:id` | 📖 Detalha livro com autor | `id` (ObjectId) | ✅ |
-| `POST` | `/livros` | ➕ Cria novo livro | Body: ver schema | ✅ |
-| `PUT` | `/livros/:id` | ✏️ Atualiza livro | `id` + campos | ✅ |
-| `DELETE` | `/livros/:id` | 🗑️ Remove livro | `id` (ObjectId) | ✅ |
+| Método   | Endpoint        | Descrição                     | Parâmetros                      | Status |
+| -------- | --------------- | ----------------------------- | ------------------------------- | ------ |
+| `GET`    | `/livros`       | 📋 Lista livros com paginação | `pagina`, `limite`, `ordenacao` | ✅     |
+| `GET`    | `/livros/busca` | 🔍 Busca avançada             | Ver tabela abaixo               | ✅     |
+| `GET`    | `/livros/:id`   | 📖 Detalha livro com autor    | `id` (ObjectId)                 | ✅     |
+| `POST`   | `/livros`       | ➕ Cria novo livro            | Body: ver schema                | ✅     |
+| `PUT`    | `/livros/:id`   | ✏️ Atualiza livro             | `id` + campos                   | ✅     |
+| `DELETE` | `/livros/:id`   | 🗑️ Remove livro               | `id` (ObjectId)                 | ✅     |
 
 **Parâmetros de Busca Avançada:**
 
-| Parâmetro | Tipo | Descrição | Exemplo |
-|-----------|------|-----------|---------|
-| `editora` | String | Nome da editora (parcial) | `Casa do código` |
-| `titulo` | String | Título do livro (regex) | `JavaScript` |
-| `minPaginas` | Number | Páginas mínimas | `100` |
-| `maxPaginas` | Number | Páginas máximas | `500` |
-| `nomeAutor` | String | Nome do autor | `Douglas` |
+| Parâmetro    | Tipo   | Descrição                 | Exemplo          |
+| ------------ | ------ | ------------------------- | ---------------- |
+| `editora`    | String | Nome da editora (parcial) | `Casa do código` |
+| `titulo`     | String | Título do livro (regex)   | `JavaScript`     |
+| `minPaginas` | Number | Páginas mínimas           | `100`            |
+| `maxPaginas` | Number | Páginas máximas           | `500`            |
+| `nomeAutor`  | String | Nome do autor             | `Douglas`        |
 
 </details>
 
@@ -468,13 +477,13 @@ curl -X POST "http://localhost:3000/livros" \
 
 <div align="center">
 
-| Código | Status | Descrição | Exemplo de Uso |
-|--------|--------|-----------|----------------|
-| ![200](https://img.shields.io/badge/200-OK-green) | ✅ Sucesso | Operação realizada | GET, PUT bem-sucedidos |
-| ![201](https://img.shields.io/badge/201-Created-blue) | ➕ Criado | Recurso criado | POST bem-sucedido |
-| ![400](https://img.shields.io/badge/400-Bad_Request-orange) | ❌ Dados inválidos | Erro de validação | Campos obrigatórios |
-| ![404](https://img.shields.io/badge/404-Not_Found-red) | 🔍 Não encontrado | Recurso inexistente | ID inválido |
-| ![500](https://img.shields.io/badge/500-Server_Error-darkred) | 💥 Erro interno | Falha no servidor | Erro de banco |
+| Código                                                        | Status             | Descrição           | Exemplo de Uso         |
+| ------------------------------------------------------------- | ------------------ | ------------------- | ---------------------- |
+| ![200](https://img.shields.io/badge/200-OK-green)             | ✅ Sucesso         | Operação realizada  | GET, PUT bem-sucedidos |
+| ![201](https://img.shields.io/badge/201-Created-blue)         | ➕ Criado          | Recurso criado      | POST bem-sucedido      |
+| ![400](https://img.shields.io/badge/400-Bad_Request-orange)   | ❌ Dados inválidos | Erro de validação   | Campos obrigatórios    |
+| ![404](https://img.shields.io/badge/404-Not_Found-red)        | 🔍 Não encontrado  | Recurso inexistente | ID inválido            |
+| ![500](https://img.shields.io/badge/500-Server_Error-darkred) | 💥 Erro interno    | Falha no servidor   | Erro de banco          |
 
 </div>
 
@@ -486,50 +495,55 @@ curl -X POST "http://localhost:3000/livros" \
 
 ```bash
 # Verificar problemas de código
-npx eslint .
+npm run lint
 
 # Corrigir automaticamente
-npx eslint . --fix
+npm run lint:fix
+```
 
-# Verificar arquivo específico
-npx eslint src/controllers/livrosController.js
+### 🎨 **Prettier - Formatação**
+
+```bash
+# Verificar formatação
+npm run format:check
+
+# Aplicar formatação
+npm run format:write
 ```
 
 ### 🧪 **Framework de Testes Recomendado**
 
 ```bash
-# Instalar Jest para testes
-npm install --save-dev jest supertest
+# Executar testes
+npm test
 
-# Instalar para testes de integração
-npm install --save-dev mongodb-memory-server
+# Gerar cobertura
+npm run test:coverage
 ```
 
 ### 📊 **Exemplo de Teste Unitário**
 
 ```javascript
 // tests/controllers/autores.test.js
-import request from 'supertest';
-import app from '../../src/app.js';
+import request from "supertest";
+import app from "../../src/app.js";
 
-describe('🧪 Autores Controller', () => {
-  test('✅ Deve listar autores com paginação', async () => {
-    const response = await request(app)
-      .get('/autores?pagina=1&limite=5')
-      .expect(200);
-    
-    expect(response.body).toHaveProperty('resultado');
-    expect(response.body).toHaveProperty('info');
-    expect(response.body.info).toHaveProperty('totalRegistros');
+describe("🧪 Autores Controller", () => {
+  test("✅ Deve listar autores com paginação", async () => {
+    const response = await request(app).get("/autores?pagina=1&limite=5").expect(200);
+
+    expect(response.body).toHaveProperty("resultado");
+    expect(response.body).toHaveProperty("info");
+    expect(response.body.info).toHaveProperty("totalRegistros");
   });
-  
-  test('❌ Deve retornar erro 400 para dados inválidos', async () => {
+
+  test("❌ Deve retornar erro 400 para dados inválidos", async () => {
     const response = await request(app)
-      .post('/autores')
-      .send({ nome: '', nacionalidade: '' })
+      .post("/autores")
+      .send({ nome: "", nacionalidade: "" })
       .expect(400);
-    
-    expect(response.body).toHaveProperty('erro');
+
+    expect(response.body).toHaveProperty("erro");
   });
 });
 ```
@@ -549,12 +563,12 @@ describe('🧪 Autores Controller', () => {
 
 <div align="center">
 
-| Plataforma | Tipo | Complexidade | Recomendado Para |
-|------------|------|--------------|------------------|
-| ![Heroku](https://img.shields.io/badge/Heroku-430098?style=flat&logo=heroku&logoColor=white) | PaaS | 🟢 Baixa | Prototipagem, MVP |
-| ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white) | Serverless | 🟡 Média | APIs stateless |
-| ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white) | IaaS | 🔴 Alta | Produção enterprise |
-| ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-0080FF?style=flat&logo=digitalocean&logoColor=white) | VPS | 🟡 Média | Custo-benefício |
+| Plataforma                                                                                                     | Tipo       | Complexidade | Recomendado Para    |
+| -------------------------------------------------------------------------------------------------------------- | ---------- | ------------ | ------------------- |
+| ![Heroku](https://img.shields.io/badge/Heroku-430098?style=flat&logo=heroku&logoColor=white)                   | PaaS       | 🟢 Baixa     | Prototipagem, MVP   |
+| ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)                   | Serverless | 🟡 Média     | APIs stateless      |
+| ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white)                     | IaaS       | 🔴 Alta      | Produção enterprise |
+| ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-0080FF?style=flat&logo=digitalocean&logoColor=white) | VPS        | 🟡 Média     | Custo-benefício     |
 
 </div>
 
@@ -562,7 +576,7 @@ describe('🧪 Autores Controller', () => {
 
 ```dockerfile
 # Dockerfile
-FROM node:16-alpine
+FROM node:20-alpine
 
 WORKDIR /app
 
@@ -588,7 +602,7 @@ CMD ["npm", "start"]
 
 ```yaml
 # docker-compose.yml para escalabilidade
-version: '3.8'
+version: "3.8"
 services:
   api:
     build: .
@@ -600,16 +614,16 @@ services:
     depends_on:
       - mongodb
     deploy:
-      replicas: 3  # 3 instâncias da API
-      
+      replicas: 3 # 3 instâncias da API
+
   mongodb:
-    image: mongo:5
+    image: mongo:6
     volumes:
       - mongo_data:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_USER}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASS}
-      
+
   nginx:
     image: nginx:alpine
     ports:
@@ -650,7 +664,7 @@ heroku logs --tail
 <img src="https://github.com/ESousa97.png" width="120" height="120" style="border-radius: 50%; border: 3px solid #4CAF50;">
 
 **José Enoque Sousa**  
-*Full Stack Developer*
+_Full Stack Developer_
 
 [![GitHub](https://img.shields.io/badge/GitHub-ESousa97-181717?style=flat-square&logo=github)](https://github.com/ESousa97)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Enoque%20Sousa-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/enoque-sousa-bb89aa168/)
@@ -666,13 +680,15 @@ heroku logs --tail
 
 1. Crie o arquivo `.env` na raiz do projeto
 2. Defina `STRING_CONEXAO_DB` com a URL do MongoDB:
+
    ```env
    # Local
    STRING_CONEXAO_DB=mongodb://localhost:27017/livraria
-   
+
    # MongoDB Atlas (substitua <USER>, <PASSWORD> e <CLUSTER>)
    STRING_CONEXAO_DB=mongodb+srv://<USER>:<PASSWORD>@<CLUSTER>.mongodb.net/livraria
    ```
+
 3. Certifique-se de que o MongoDB está rodando (local) ou configurado (Atlas)
 
 </details>
@@ -681,12 +697,14 @@ heroku logs --tail
 <summary><strong>❌ Por que estou recebendo erro 400 ao criar um recurso?</strong></summary>
 
 Erro 400 indica **falha de validação**. Verifique:
+
 - ✅ Campos obrigatórios preenchidos
 - ✅ Tipos de dados corretos
 - ✅ Formato dos ObjectIds (se aplicável)
 - 📖 Consulte a mensagem de erro retornada para detalhes específicos
 
 Exemplo de erro de validação:
+
 ```json
 {
   "erro": "Dados fornecidos estão em formato incorreto",
@@ -704,11 +722,13 @@ Exemplo de erro de validação:
 <summary><strong>🔍 A busca por título é case-sensitive?</strong></summary>
 
 **Não!** A busca por título é:
+
 - 🔤 **Case-insensitive** (ignora maiúsculas/minúsculas)
 - 🎯 **Parcial** (busca por trechos do título)
 - ⚡ **Otimizada** com regex MongoDB
 
 Exemplo:
+
 ```bash
 # Encontra "JavaScript: O Guia Definitivo"
 curl "http://localhost:3000/livros/busca?titulo=javascript"
@@ -733,6 +753,7 @@ ordenacao=campo:ordem  # 1=ASC, -1=DESC
 ```
 
 **Resposta:**
+
 ```json
 {
   "resultado": [...],
@@ -753,12 +774,14 @@ ordenacao=campo:ordem  # 1=ASC, -1=DESC
 **Sim**, com algumas considerações:
 
 ✅ **Pronto:**
+
 - Tratamento robusto de erros
 - Validação de dados rigorosa
 - Arquitetura escalável
 - Configuração por variáveis de ambiente
 
 ⚠️ **Recomendações adicionais:**
+
 - Implementar autenticação/autorização
 - Adicionar rate limiting
 - Configurar logs estruturados
@@ -771,6 +794,7 @@ ordenacao=campo:ordem  # 1=ASC, -1=DESC
 <summary><strong>🔧 Como adicionar novos campos aos modelos?</strong></summary>
 
 1. **Atualize o Schema** no arquivo do modelo:
+
 ```javascript
 // src/models/Livro.js
 const livroSchema = new mongoose.Schema({
@@ -780,10 +804,10 @@ const livroSchema = new mongoose.Schema({
     required: true,
     unique: true,
     validate: {
-      validator: function(v) {
+      validator: function (v) {
         return /^978-\d{10}$/.test(v);
       },
-      message: 'ISBN deve seguir o formato 978-XXXXXXXXXX'
+      message: "ISBN deve seguir o formato 978-XXXXXXXXXX"
     }
   }
 });
@@ -804,17 +828,18 @@ Recomendações para monitoramento:
 // Middleware de logging personalizado
 app.use((req, res, next) => {
   const start = Date.now();
-  
-  res.on('finish', () => {
+
+  res.on("finish", () => {
     const duration = Date.now() - start;
     console.log(`${req.method} ${req.url} - ${res.statusCode} - ${duration}ms`);
   });
-  
+
   next();
 });
 ```
 
 **Ferramentas recomendadas:**
+
 - 📊 **APM:** New Relic, DataDog
 - 📈 **Logs:** Winston, Morgan
 - 🔍 **Debugging:** Debug module
@@ -830,14 +855,12 @@ app.use((req, res, next) => {
 
 ### 🆘 **Precisa de Ajuda?**
 
-| Tipo de Suporte | Canal | Tempo de Resposta |
-|------------------|-------|-------------------|
-| 🐛 **Bugs** | [GitHub Issues](https://github.com/ESousa97/api-node-express-2/issues) | 24-48h |
-| 💡 **Sugestões** | [GitHub Discussions](https://github.com/ESousa97/api-node-express-2/discussions) | 2-7 dias |
-| 📚 **Dúvidas** | [LinkedIn](https://www.linkedin.com/in/enoque-sousa-bb89aa168/) | 1-3 dias |
-| 🚀 **Colaboração** | [Email](mailto:enoque.sousa@example.com) | 24h |
-
-
+| Tipo de Suporte    | Canal                                                                            | Tempo de Resposta |
+| ------------------ | -------------------------------------------------------------------------------- | ----------------- |
+| 🐛 **Bugs**        | [GitHub Issues](https://github.com/ESousa97/api-node-express-2/issues)           | 24-48h            |
+| 💡 **Sugestões**   | [GitHub Discussions](https://github.com/ESousa97/api-node-express-2/discussions) | 2-7 dias          |
+| 📚 **Dúvidas**     | [LinkedIn](https://www.linkedin.com/in/enoque-sousa-bb89aa168/)                  | 1-3 dias          |
+| 🚀 **Colaboração** | [Email](mailto:enoque.sousa@example.com)                                         | 24h               |
 
 </div>
 
@@ -853,14 +876,13 @@ app.use((req, res, next) => {
 
 ---
 
-*💡 **Criado com** ❤️ **e muito** ☕ **por [José Enoque Sousa](https://github.com/ESousa97)***
+\*💡 **Criado com** ❤️ **e muito** ☕ **por [José Enoque Sousa](https://github.com/ESousa97)\***
 
-*📅 **Última atualização:** Dezembro 2024*
+_📅 **Última atualização:** Dezembro 2024_
 
 **🔗 Links Úteis:**
 [📚 Documentação](README.md) • [🐛 Issues](https://github.com/ESousa97/api-node-express-2/issues) • [💬 Discussions](https://github.com/ESousa97/api-node-express-2/discussions) • [📋 Projetos](https://github.com/ESousa97/api-node-express-2/projects)
 
 </div>
-
 
 > ✨ **Criado em:** 18 de jun. de 2024 às 21:40

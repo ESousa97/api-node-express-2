@@ -1,9 +1,9 @@
 ---
 name: 🐛 Bug Report
 about: Reporte um bug para nos ajudar a melhorar
-title: '[BUG] '
-labels: 'bug'
-assignees: ''
+title: "[BUG] "
+labels: "bug"
+assignees: ""
 ---
 
 ## 🐛 Descrição do Bug

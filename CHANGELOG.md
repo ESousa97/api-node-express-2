@@ -8,6 +8,7 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 ## [Unreleased]
 
 ### Added
+
 - Configuração de CI/CD com GitHub Actions
 - Badges de qualidade no README
 - Testes automatizados com Jest
@@ -18,16 +19,19 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 - Template de exemplo para variáveis de ambiente
 
 ### Changed
+
 - Atualização das dependências de desenvolvimento
 - Melhoria na configuração do ESLint
 - Padronização dos scripts npm
 
 ### Fixed
+
 - Correção na configuração do ESLint para ES Modules
 
 ## [1.0.0] - 2026-01-12
 
 ### Added
+
 - API RESTful para gerenciamento de livros e autores
 - CRUD completo para entidade Livro
 - CRUD completo para entidade Autor
@@ -45,6 +49,7 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 - Documentação completa no README
 
 ### Technical
+
 - Express.js como framework web
 - Mongoose para ODM MongoDB
 - Nodemon para desenvolvimento

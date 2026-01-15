@@ -41,25 +41,24 @@ class AutorController {
   static atualizarAutor = async (req, res, next) => {
     try {
       const id = req.params.id;
-      
+
       // Validar campos permitidos para atualização
       const camposPermitidos = ["nome", "nacionalidade"];
       const dadosAtualizacao = {};
-      
+
       for (const campo of camposPermitidos) {
         if (req.body[campo] !== undefined) {
           dadosAtualizacao[campo] = req.body[campo];
         }
       }
 
-      const autorResultado = await autores.findByIdAndUpdate(id, {$set: dadosAtualizacao});
+      const autorResultado = await autores.findByIdAndUpdate(id, { $set: dadosAtualizacao });
 
       if (autorResultado !== null) {
-        res.status(200).send({message: "Autor atualizado com sucesso"});
+        res.status(200).send({ message: "Autor atualizado com sucesso" });
       } else {
         next(new NaoEncontrado("Id do Autor não localizado."));
       }
-
     } catch (erro) {
       next(erro);
     }
@@ -72,7 +71,7 @@ class AutorController {
       const autorResultado = await autores.findByIdAndDelete(id);
 
       if (autorResultado !== null) {
-        res.status(200).send({message: "Autor removido com sucesso"});
+        res.status(200).send({ message: "Autor removido com sucesso" });
       } else {
         next(new NaoEncontrado("Id do Autor não localizado."));
       }

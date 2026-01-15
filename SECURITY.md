@@ -32,17 +32,20 @@ A segurança deste projeto é levada a sério. Se você descobrir uma vulnerabil
 Este projeto implementa as seguintes práticas:
 
 #### Dependências
+
 - Atualizações regulares via Dependabot
 - Auditoria de segurança com `npm audit`
 - Verificação de vulnerabilidades conhecidas
 
 #### Código
+
 - Validação de entrada em todos os endpoints
 - Sanitização de dados
 - Tratamento de erros sem exposição de informações sensíveis
 - Não há secrets hardcoded no código
 
 #### Infraestrutura
+
 - Variáveis de ambiente para configurações sensíveis
 - Arquivo `.env` no `.gitignore`
 

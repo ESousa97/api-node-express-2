@@ -18,11 +18,11 @@ export default [
   pluginJs.configs.recommended,
   {
     rules: {
-      "indent": ["error", 2],
-      "quotes": ["error", "double"],
-      "semi": ["error", "always"],
+      indent: ["error", 2],
+      quotes: ["error", "double"],
+      semi: ["error", "always"],
       "no-console": "off",
-      "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+      "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
       "linebreak-style": "off"
     }
   }

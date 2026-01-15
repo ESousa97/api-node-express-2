@@ -13,4 +13,4 @@ router
   .put("/livros/:id", rateLimiterEscrita, LivroController.atualizarLivro)
   .delete("/livros/:id", rateLimiterEscrita, LivroController.excluirLivro);
 
-export default router;   
+export default router;

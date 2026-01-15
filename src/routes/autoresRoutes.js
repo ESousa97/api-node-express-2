@@ -12,4 +12,4 @@ router
   .put("/autores/:id", rateLimiterEscrita, AutorController.atualizarAutor)
   .delete("/autores/:id", rateLimiterEscrita, AutorController.excluirAutor);
 
-export default router;   
+export default router;

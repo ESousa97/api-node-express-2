@@ -65,7 +65,7 @@ describe("Middleware Paginar", () => {
 
     await paginar(mockReq, mockRes, mockNext);
 
-    expect(mockReq.resultado.sort).toHaveBeenCalledWith({ "titulo": 1 });
+    expect(mockReq.resultado.sort).toHaveBeenCalledWith({ titulo: 1 });
   });
 
   it("deve chamar next com erro em caso de exceção", async () => {

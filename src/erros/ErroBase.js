@@ -3,7 +3,7 @@ class ErroBase extends Error {
     super();
     this.message = mensagem;
     this.status = status;
-  }    
+  }
 
   enviarResposta(res) {
     res.status(this.status).send({
