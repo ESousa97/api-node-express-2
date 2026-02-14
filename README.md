@@ -254,24 +254,24 @@ Acesse: `http://localhost:3000/`
 
 ### Autores
 
-| Método   | Rota             | Descrição                      | Parâmetros                      |
-| -------- | ---------------- | ------------------------------ | ------------------------------- |
-| `GET`    | `/autores`       | Lista autores com paginação    | `pagina`, `limite`, `ordenacao` |
-| `GET`    | `/autores/:id`   | Busca autor específico         | `id` (ObjectId)                 |
-| `POST`   | `/autores`       | Cria novo autor                | Body: `nome`, `nacionalidade`   |
-| `PUT`    | `/autores/:id`   | Atualiza autor                 | `id` + campos a atualizar       |
-| `DELETE` | `/autores/:id`   | Remove autor                   | `id` (ObjectId)                 |
+| Método   | Rota           | Descrição                   | Parâmetros                      |
+| -------- | -------------- | --------------------------- | ------------------------------- |
+| `GET`    | `/autores`     | Lista autores com paginação | `pagina`, `limite`, `ordenacao` |
+| `GET`    | `/autores/:id` | Busca autor específico      | `id` (ObjectId)                 |
+| `POST`   | `/autores`     | Cria novo autor             | Body: `nome`, `nacionalidade`   |
+| `PUT`    | `/autores/:id` | Atualiza autor              | `id` + campos a atualizar       |
+| `DELETE` | `/autores/:id` | Remove autor                | `id` (ObjectId)                 |
 
 ### Livros
 
-| Método   | Rota              | Descrição                      | Parâmetros                      |
-| -------- | ----------------- | ------------------------------ | ------------------------------- |
-| `GET`    | `/livros`         | Lista livros com paginação     | `pagina`, `limite`, `ordenacao` |
-| `GET`    | `/livros/busca`   | Busca avançada                 | `editora`, `titulo`, `minPaginas`, `maxPaginas`, `nomeAutor` |
-| `GET`    | `/livros/:id`     | Detalha livro com autor        | `id` (ObjectId)                 |
-| `POST`   | `/livros`         | Cria novo livro                | Body: `titulo`, `autor`, `editora`, `numeroPaginas` |
-| `PUT`    | `/livros/:id`     | Atualiza livro                 | `id` + campos a atualizar       |
-| `DELETE` | `/livros/:id`     | Remove livro                   | `id` (ObjectId)                 |
+| Método   | Rota            | Descrição                  | Parâmetros                                                   |
+| -------- | --------------- | -------------------------- | ------------------------------------------------------------ |
+| `GET`    | `/livros`       | Lista livros com paginação | `pagina`, `limite`, `ordenacao`                              |
+| `GET`    | `/livros/busca` | Busca avançada             | `editora`, `titulo`, `minPaginas`, `maxPaginas`, `nomeAutor` |
+| `GET`    | `/livros/:id`   | Detalha livro com autor    | `id` (ObjectId)                                              |
+| `POST`   | `/livros`       | Cria novo livro            | Body: `titulo`, `autor`, `editora`, `numeroPaginas`          |
+| `PUT`    | `/livros/:id`   | Atualiza livro             | `id` + campos a atualizar                                    |
+| `DELETE` | `/livros/:id`   | Remove livro               | `id` (ObjectId)                                              |
 
 ### Paginação
 
@@ -381,24 +381,28 @@ O projeto é compatível com Vercel (serverless), AWS, DigitalOcean e qualquer p
 <summary><strong>Como configurar a conexão com o banco?</strong></summary>
 
 Defina `STRING_CONEXAO_DB` no `.env` com a URL do MongoDB (local ou Atlas). Certifique-se de que o MongoDB está rodando antes de iniciar a aplicação.
+
 </details>
 
 <details>
 <summary><strong>A busca por título é case-sensitive?</strong></summary>
 
 Não. A busca utiliza regex case-insensitive do MongoDB, permitindo buscas parciais. Exemplo: `?titulo=javascript` encontra "JavaScript: O Guia Definitivo".
+
 </details>
 
 <details>
 <summary><strong>Como funciona a paginação?</strong></summary>
 
 Use os parâmetros `pagina` (padrão: 1), `limite` (padrão: 5, máx: 50) e `ordenacao` (formato `campo:1` para ASC ou `campo:-1` para DESC). A resposta inclui metadados com total de registros e páginas.
+
 </details>
 
 <details>
 <summary><strong>O projeto está pronto para produção?</strong></summary>
 
 A base está sólida com tratamento de erros, validação e arquitetura escalável. Para produção, recomenda-se adicionar autenticação/autorização (JWT), logs estruturados (Winston) e monitoramento (APM).
+
 </details>
 
 ---
